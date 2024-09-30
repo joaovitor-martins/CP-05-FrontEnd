@@ -9,11 +9,11 @@ from sklearn.decomposition import PCA
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Carregar dataset atualizado com clusters
-movies_df = pd.read_csv(r'C:\\Users\\marti_ezke8vn\\Downloads\\CP 04 - Front  Cluster\\all_movies_with_clusters.csv', delimiter=';')
-model = joblib.load(r'C:\\Users\\marti_ezke8vn\\Downloads\\CP 04 - Front  Cluster\\kmeans_model_2.0.joblib')
+movies_df = pd.read_csv(r'all_movies_with_clusters.csv', delimiter=';')
+model = joblib.load(r'kmeans_model_2.0.joblib')
 
 # Carregar o modelo PCA
-pca_model = joblib.load(r'C:\\Users\\marti_ezke8vn\\Downloads\\CP 04 - Front  Cluster\\pca_model.joblib')
+pca_model = joblib.load(r'pca_model.joblib')
 
 # Carregar o modelo BERT e o tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
